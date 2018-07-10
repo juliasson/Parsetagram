@@ -17,15 +17,20 @@ public class MainActivity extends AppCompatActivity {
     private EditText etUserName;
     private EditText etPassword;
     private Button bvLogIn;
+    private Button bvSignUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().setIcon(R.drawable.icon);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         etUserName = findViewById(R.id.etUserName);
         etPassword = findViewById(R.id.etPassword);
-        bvLogIn = findViewById(R.id.bvLogIn);
+        bvLogIn = findViewById(R.id.bvLogin);
+        bvSignUp = findViewById(R.id.bvSignUp);
 
         bvLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +38,15 @@ public class MainActivity extends AppCompatActivity {
                 final String username = etUserName.getText().toString();
                 final String password = etPassword.getText().toString();
                 logIn(username, password);
+            }
+        });
+
+        bvSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Intent i = new Intent(MainActivity.this, CreateAccountActivity.class);
+                startActivity(i);
+                finish();
             }
         });
     }
