@@ -1,5 +1,6 @@
 package me.juliasson.parsetagram;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -24,6 +25,7 @@ public class HomeActivity extends AppCompatActivity {
     private EditText etDescription;
     private Button bvCreate;
     private Button bvRefresh;
+    private Button bvSettings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +38,7 @@ public class HomeActivity extends AppCompatActivity {
         etDescription = findViewById(R.id.etDescription);
         bvCreate = findViewById(R.id.bvCreate);
         bvRefresh = findViewById(R.id.bvRefresh);
-
+        bvSettings = findViewById(R.id.bvSettings);
 
         bvCreate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +67,14 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 loadTopPosts();
+            }
+        });
+
+        bvSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(HomeActivity.this, SettingsActivity.class);
+                startActivity(i);
             }
         });
 

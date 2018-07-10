@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.parse.LogInCallback;
 import com.parse.ParseException;
@@ -28,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.tbToolBar);
         setSupportActionBar(toolbar);
 
+        ParseUser currentUser = ParseUser.getCurrentUser();
+        if (currentUser != null) {
+            Log.d("login_activity", "Login successful");
+            final Intent i = new Intent(MainActivity.this, HomeActivity.class);
+            startActivity(i);
+            finish();
+        }
+
         etUserName = findViewById(R.id.etUserName);
         etPassword = findViewById(R.id.etPassword);
         bvLogIn = findViewById(R.id.bvLogin);
@@ -47,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 final Intent i = new Intent(MainActivity.this, CreateAccountActivity.class);
                 startActivity(i);
-                finish();
             }
         });
     }
@@ -58,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             public void done(ParseUser user, ParseException e) {
                 if (e == null) {
                     Log.d("login_activity", "Login successful");
+                    Toast.makeText(MainActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
                     final Intent i = new Intent(MainActivity.this, HomeActivity.class);
                     startActivity(i);
                     finish();

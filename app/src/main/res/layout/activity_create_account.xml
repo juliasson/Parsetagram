@@ -6,6 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".CreateAccountActivity">
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <EditText
+            android:id="@+id/etFirstName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_border"
+            android:hint="First name"
+            android:inputType="text"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp" />
+
+        <EditText
+            android:id="@+id/etLastName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_border"
+            android:hint="Last name"
+            android:inputType="text"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp" />
+
+    </LinearLayout>
+
     <EditText
         android:id="@+id/etUserName"
         android:layout_width="match_parent"
@@ -14,8 +63,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:hint="username"
+        android:layout_marginTop="8dp"
+        android:hint="Username"
         android:inputType="text"
         android:paddingBottom="8dp"
         android:paddingLeft="16dp"
@@ -24,7 +73,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:background="@drawable/edittext_border" />
 
     <EditText
         android:id="@+id/etPassword"
@@ -35,7 +85,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:hint="password"
+        android:hint="Password"
         android:inputType="textPassword"
         android:paddingBottom="8dp"
         android:paddingLeft="16dp"
@@ -44,7 +94,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUserName" />
+        app:layout_constraintTop_toBottomOf="@+id/etUserName"
+        android:background="@drawable/edittext_border" />
 
     <EditText
         android:id="@+id/etEmail"
@@ -55,7 +106,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:hint="email"
+        android:hint="Email"
         android:inputType="textEmailAddress"
         android:paddingBottom="8dp"
         android:paddingLeft="16dp"
@@ -64,7 +115,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        android:background="@drawable/edittext_border" />
 
     <Button
         android:id="@+id/bvSignUp"

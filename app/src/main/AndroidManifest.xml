@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,8 +20,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".HomeActivity" />
-        <activity android:name=".CreateAccountActivity"
+        <activity
+            android:name=".CreateAccountActivity"
             android:theme="@style/AppTheme.WithActionBar" />
+        <activity android:name=".SettingsActivity"></activity>
     </application>
 
 </manifest>
