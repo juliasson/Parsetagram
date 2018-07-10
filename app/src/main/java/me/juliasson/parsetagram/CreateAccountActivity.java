@@ -22,5 +22,6 @@ public class CreateAccountActivity extends AppCompatActivity {
         etEmail = findViewById(R.id.etEmail);
         bvSignUp = findViewById(R.id.bvSignUp);
 
+
     }
 }
