@@ -22,8 +22,7 @@
         </activity>
         <activity android:name=".HomeActivity" />
         <activity
-            android:name=".CreateAccountActivity"
-            android:theme="@style/AppTheme.WithActionBar" />
+            android:name=".CreateAccountActivity" />
         <activity android:name=".SettingsActivity" />
 
         <!-- make sure within the application tag, otherwise app will crash with XmlResourceParser errors -->
