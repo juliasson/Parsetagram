@@ -226,4 +226,9 @@ public class CreatePostActivity extends AppCompatActivity {
             }
         }
     }
+
+    public void onClickToSettings(View view) {
+        Intent i = new Intent(CreatePostActivity.this, SettingsActivity.class);
+        startActivity(i);
+    }
 }

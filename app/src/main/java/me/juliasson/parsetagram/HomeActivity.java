@@ -1,5 +1,6 @@
 package me.juliasson.parsetagram;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -8,6 +9,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.View;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -52,7 +54,8 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
         // Configure the refreshing colors
-        swipeContainer.setColorSchemeResources(android.R.color.holo_blue_bright,
+        swipeContainer.setColorSchemeResources(
+                android.R.color.holo_blue_bright,
                 android.R.color.holo_green_light,
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
@@ -89,5 +92,10 @@ public class HomeActivity extends AppCompatActivity {
         postAdapter.addAll(posts);
         // Now we call setRefreshing(false) to signal refresh has finished
         swipeContainer.setRefreshing(false);
+    }
+
+    public void onClickToSettings(View view) {
+        Intent i = new Intent(HomeActivity.this, SettingsActivity.class);
+        startActivity(i);
     }
 }

@@ -47,6 +47,7 @@
                 android:layout_marginRight="8dp"
                 android:background="@android:color/transparent"
                 android:scaleType="fitCenter"
+                android:onClick="onClickToSettings"
                 app:srcCompat="@drawable/instagram_user_outline_24" />
 
         </RelativeLayout>

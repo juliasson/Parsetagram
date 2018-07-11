@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +16,10 @@ import com.bumptech.glide.Glide;
 
 import org.parceler.Parcels;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Locale;
 
 import me.juliasson.parsetagram.model.Post;
 
@@ -43,7 +47,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull PostAdapter.ViewHolder holder, int position) {
         Post post = mPosts.get(position);
         holder.tvUserName.setText(post.getUser().getUsername());
-        holder.tvDescription.setText(post.getDescription());
+        holder.tvDescription.setText(String.format("%s %s", post.getUser().getUsername(), post.getDescription()));
+        holder.tvTimeStamp.setText(getRelativeTimeAgo(post.getCreatedAt().toString()));
 
         Glide.with(mContext)
                 .load(post.getImage().getUrl())
@@ -67,6 +72,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
         public ImageButton ibMessage;
         public ImageButton ibBookmark;
         public TextView tvDescription;
+        public TextView tvTimeStamp;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -80,6 +86,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             ibMessage = itemView.findViewById(R.id.ibMessage);
             ibBookmark = itemView.findViewById(R.id.ibBookmark);
             tvDescription = itemView.findViewById(R.id.tvDescription);
+            tvTimeStamp = itemView.findViewById(R.id.tvTimeStamp);
 
             itemView.setOnClickListener(this);
         }
@@ -94,6 +101,24 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
                 mContext.startActivity(i);
             }
         }
+    }
+
+    // getRelativeTimeAgo("Mon Apr 01 21:16:23 +0000 2014");
+    private String getRelativeTimeAgo(String rawJsonDate) {
+        String postFormat = "EEE MMM dd HH:mm:ss ZZZZZ yyyy";
+        SimpleDateFormat sf = new SimpleDateFormat(postFormat, Locale.ENGLISH);
+        sf.setLenient(true);
+
+        String relativeDate = "";
+        try {
+            long dateMillis = sf.parse(rawJsonDate).getTime();
+            relativeDate = DateUtils.getRelativeTimeSpanString(dateMillis,
+                    System.currentTimeMillis(), DateUtils.SECOND_IN_MILLIS).toString();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        return relativeDate;
     }
 
     // Clean all elements of the recycler
