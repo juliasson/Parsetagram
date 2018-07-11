@@ -39,12 +39,13 @@
                 app:srcCompat="@drawable/nav_logo_whiteout" />
 
             <ImageButton
+                android:id="@+id/bvSettings"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_alignParentRight="true"
-                android:background="@android:color/transparent"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="8dp"
+                android:background="@android:color/transparent"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/instagram_user_outline_24" />
 

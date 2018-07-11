@@ -1,6 +1,7 @@
 package me.juliasson.parsetagram;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+
+import org.parceler.Parcels;
 
 import java.util.List;
 
@@ -77,11 +80,19 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             ibMessage = itemView.findViewById(R.id.ibMessage);
             ibBookmark = itemView.findViewById(R.id.ibBookmark);
             tvDescription = itemView.findViewById(R.id.tvDescription);
+
+            itemView.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View view) {
-
+            int position = getAdapterPosition();
+            if (position != RecyclerView.NO_POSITION) {
+                Post post = mPosts.get(position);
+                Intent i = new Intent(mContext, PostDetailActivity.class);
+                i.putExtra("post", Parcels.wrap(post));
+                mContext.startActivity(i);
+            }
         }
     }
 

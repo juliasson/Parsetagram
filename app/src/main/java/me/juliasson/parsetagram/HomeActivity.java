@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 
 import com.parse.FindCallback;
@@ -73,11 +72,8 @@ public class HomeActivity extends AppCompatActivity {
             public void done(List<Post> objects, ParseException e) {
                 if (e == null) {
                     for(int i = 0; i < objects.size(); i++) {
-                        Log.d("CreatePostActivity", "Post[" + i + "] = "
-                                + objects.get(i).getDescription()
-                                + "\nusername: " + objects.get(i).getUser().getUsername());
                         Post post = objects.get(i);
-                        posts.add(post);
+                        posts.add(0, post);
                         postAdapter.notifyItemInserted(posts.size() - 1);
                     }
                 } else {
