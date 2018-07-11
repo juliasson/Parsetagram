@@ -24,7 +24,7 @@
         <activity
             android:name=".CreateAccountActivity"
             android:theme="@style/AppTheme.WithActionBar" />
-        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".SettingsActivity" />
 
         <!-- make sure within the application tag, otherwise app will crash with XmlResourceParser errors -->
         <provider
@@ -37,6 +37,7 @@
                 android:resource="@xml/fileprovider" />
         </provider>
 
+        <activity android:name=".CreatePostActivity"></activity>
     </application>
 
 </manifest>
