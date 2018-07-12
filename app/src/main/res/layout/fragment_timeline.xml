@@ -6,51 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/tbToolBar"
-        android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/ivIcon"
-                android:layout_width="46dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                app:srcCompat="@drawable/icon" />
-
-            <ImageView
-                android:id="@+id/ivInstagram"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="8dp"
-                android:layout_toRightOf="@+id/ivIcon"
-                app:srcCompat="@drawable/nav_logo_whiteout" />
-
-            <ImageButton
-                android:id="@+id/bvSettings"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="8dp"
-                android:background="@android:color/transparent"
-                android:onClick="onClickToSettings"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/instagram_user_outline_24" />
-
-        </RelativeLayout>
-    </android.support.v7.widget.Toolbar>
 
     <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
