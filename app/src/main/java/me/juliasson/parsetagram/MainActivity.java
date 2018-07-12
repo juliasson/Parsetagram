@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ParseUser currentUser = ParseUser.getCurrentUser();
+
         if (currentUser != null) {
             Log.d("login_activity", "Login successful");
             final Intent i = new Intent(MainActivity.this, HomeActivity.class);

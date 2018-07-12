@@ -1,108 +1,112 @@
 package me.juliasson.parsetagram;
 
+import android.app.Activity;
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.text.format.DateUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link PostDetailFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link PostDetailFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Locale;
+
+import me.juliasson.parsetagram.model.Post;
+
 public class PostDetailFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    FragmentActivity listener;
 
-    private OnFragmentInteractionListener mListener;
-
-    public PostDetailFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment PostDetailFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static PostDetailFragment newInstance(String param1, String param2) {
-        PostDetailFragment fragment = new PostDetailFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_post_detail, container, false);
-    }
-
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
-    }
-
+    // This event fires 1st, before creation of fragment or any views
+    // The onAttach method is called when the Fragment instance is associated with an Activity.
+    // This does not mean the Activity is fully initialized.
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
+        if (context instanceof Activity){
+            this.listener = (FragmentActivity) context;
         }
     }
 
+    // The onCreateView method is called when Fragment should create its View object hierarchy,
+    // either dynamically or via XML layout inflation.
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
+        // Defines the xml file for the fragment
+        return inflater.inflate(R.layout.fragment_post_detail, parent, false);
+    }
+
+    // This event is triggered soon after onCreateView().
+    // Any view setup should occur here.  E.g., view lookups and attaching view listeners.
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        // Setup any handles to view objects here
+        // EditText etFoo = (EditText) view.findViewById(R.id.etFoo);
+        Post post;
+
+        ImageView ivProfileImage = view.findViewById(R.id.ivProfileImage);
+        TextView tvUserName = view.findViewById(R.id.tvUserName);
+        ImageButton ibOptions = view.findViewById(R.id.ibOptions);
+        ImageView ivImage = view.findViewById(R.id.ivImage);
+        ImageButton ibLike = view.findViewById(R.id.ibLike);
+        ImageButton ibComment = view.findViewById(R.id.ibComment);
+        ImageButton ibMessage = view.findViewById(R.id.ibMessage);
+        ImageButton ibBookmark = view.findViewById(R.id.ibBookmark);
+        TextView tvDescription = view.findViewById(R.id.tvDescription);
+        TextView tvTimeStamp = view.findViewById(R.id.tvTimeStamp);
+
+        post = getArguments().getParcelable("post");
+        Log.d("PostDetailsActivity", "Showing details for post.");
+
+        tvUserName.setText(post.getUser().getUsername());
+        tvDescription.setText(String.format("%s %s", post.getUser().getUsername(), post.getDescription()));
+        tvTimeStamp.setText(getRelativeTimeAgo(post.getCreatedAt().toString()));
+
+        Glide.with(this)
+                .load(post.getImage().getUrl())
+                .into(ivImage);
+    }
+
+    // This method is called when the fragment is no longer connected to the Activity
+    // Any references saved in onAttach should be nulled out here to prevent memory leaks.
     @Override
     public void onDetach() {
         super.onDetach();
-        mListener = null;
+        this.listener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
+    // This method is called after the parent Activity's onCreate() method has completed.
+    // Accessing the view hierarchy of the parent activity must be done in the onActivityCreated.
+    // At this point, it is safe to search for activity View objects by their ID, for example.
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+    }
+
+    // getRelativeTimeAgo("Mon Apr 01 21:16:23 +0000 2014");
+    private String getRelativeTimeAgo(String rawJsonDate) {
+        String postFormat = "EEE MMM dd HH:mm:ss ZZZZZ yyyy";
+        SimpleDateFormat sf = new SimpleDateFormat(postFormat, Locale.ENGLISH);
+        sf.setLenient(true);
+
+        String relativeDate = "";
+        try {
+            long dateMillis = sf.parse(rawJsonDate).getTime();
+            relativeDate = DateUtils.getRelativeTimeSpanString(dateMillis,
+                    System.currentTimeMillis(), DateUtils.SECOND_IN_MILLIS).toString();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        return relativeDate;
     }
 }

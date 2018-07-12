@@ -1,8 +1,9 @@
 package me.juliasson.parsetagram;
 
 import android.content.Context;
-import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.RecyclerView;
 import android.text.format.DateUtils;
 import android.view.LayoutInflater;
@@ -13,8 +14,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-
-import org.parceler.Parcels;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -96,9 +95,19 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             int position = getAdapterPosition();
             if (position != RecyclerView.NO_POSITION) {
                 Post post = mPosts.get(position);
-                Intent i = new Intent(mContext, PostDetailActivity.class);
-                i.putExtra("post", Parcels.wrap(post));
-                mContext.startActivity(i);
+                Bundle args = new Bundle();
+                args.putParcelable("post", post);
+                PostDetailFragment fragment = new PostDetailFragment();
+                fragment.setArguments(args);
+                HomeActivity activity = (HomeActivity)mContext;
+                FragmentTransaction transaction = activity.getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.linearLayout, fragment);
+                transaction.commit();
+
+                //
+//                Intent i = new Intent(mContext, PostDetailActivity.class);
+//                i.putExtra("post", Parcels.wrap(post));
+//                mContext.startActivity(i);
             }
         }
     }
