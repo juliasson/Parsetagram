@@ -25,9 +25,11 @@ public class ProfileFragment extends Fragment {
 
     ImageView ivProfileImageDetail;
     TextView tvUserName;
+    TextView tvNumPosts;
     RecyclerView rvProfilePosts;
     ArrayList<Post> profilePosts;
     PostAdapter postAdapter;
+    int counter=0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent, Bundle savedInstanceState) {
@@ -42,6 +44,7 @@ public class ProfileFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         ivProfileImageDetail = view.findViewById(R.id.ivProfileImageDetail);
         tvUserName = view.findViewById(R.id.tvUserName);
+        tvNumPosts = view.findViewById(R.id.tvNumPosts);
 
         tvUserName.setText(ParseUser.getCurrentUser().getUsername());
 
@@ -78,8 +81,10 @@ public class ProfileFragment extends Fragment {
                         if (currentUserId.equals(postUserId)) {
                             profilePosts.add(0, post);
                             postAdapter.notifyItemInserted(profilePosts.size() - 1);
+                            counter++;
                         }
                     }
+                    tvNumPosts.setText(String.format("%s", counter));
                 } else {
                     e.printStackTrace();
                 }
