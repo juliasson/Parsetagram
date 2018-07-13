@@ -51,4 +51,13 @@
         app:layout_constraintTop_toBottomOf="@+id/tbToolBar"
         app:srcCompat="@drawable/camera_shadow_fill" />
 
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/etDescription"
+        tools:layout_editor_absoluteX="168dp" />
+
 </android.support.constraint.ConstraintLayout>

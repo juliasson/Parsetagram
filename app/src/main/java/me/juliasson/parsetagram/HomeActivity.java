@@ -23,6 +23,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.parse.ParseException;
@@ -204,7 +205,9 @@ public class HomeActivity extends AppCompatActivity {
         final String description = ((CameraFragment)fragment2).etDescription.getText().toString();
         final ParseUser user = ParseUser.getCurrentUser();
         final ParseFile parseFile = new ParseFile(photoFile);
+        final ProgressBar pb = (ProgressBar) findViewById(R.id.pbLoading);
 
+        pb.setVisibility(ProgressBar.VISIBLE);
         parseFile.saveInBackground(new SaveCallback() {
             @Override
             public void done(ParseException e) {
@@ -215,6 +218,7 @@ public class HomeActivity extends AppCompatActivity {
                 }
             }
         });
+        pb.setVisibility(ProgressBar.INVISIBLE);
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.flContainer, fragment1).commit();
     }
