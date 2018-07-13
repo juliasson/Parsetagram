@@ -16,7 +16,6 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.parse.ParseUser;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -77,7 +76,7 @@ public class PostDetailFragment extends Fragment {
                 .load(post.getImage().getUrl())
                 .into(ivImage);
         Glide.with(view.getContext())
-                .load(ParseUser.getCurrentUser().getParseFile("profileImage").getUrl())
+                .load(post.getUser().getParseFile("profileImage").getUrl())
                 .apply(RequestOptions.circleCropTransform())
                 .into(ivProfileImage);
     }
