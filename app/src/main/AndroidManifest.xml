@@ -37,7 +37,6 @@
                 android:resource="@xml/fileprovider" />
         </provider>
 
-        <activity android:name=".PostDetailActivity" />
     </application>
 
 </manifest>

@@ -11,40 +11,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beffdcb1-409c-46c8-ab7e-0d9c1b5b1311" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_paging_common_1_0_0_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_paging_runtime_1_0_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/SpaceItemDecoration.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/PostProfileFragment.java" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/resourceHashesCache.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/jarAnalysis.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/javaCompile.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/taskJars.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/CameraFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/CameraFragment.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/CreateAccountActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/CreateAccountActivity.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/HomeActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/HomeActivity.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/PostAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/PostAdapter.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/PostDetailActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/PostDetailActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/PostDetailFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/PostDetailFragment.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/ProfileFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/ProfileFragment.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/TimelineFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/TimelineFragment.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/model/Post.java" afterPath="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/model/Post.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_post_detail.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_post_detail.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_camera.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_camera.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_post_detail.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_post_detail.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_post.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_post.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/menu_bottom_navigation.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_bottom_navigation.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/PostDetailActivity.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_create_account.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_create_account.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_post_detail.xml" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,21 +53,77 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="PostAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/PostAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="125" column="63" lean-forward="false" selection-start-line="125" selection-start-column="63" selection-end-line="125" selection-end-column="63" />
+              <folding>
+                <element signature="e#896#897#0" expanded="true" />
+                <element signature="e#926#927#0" expanded="true" />
+                <element signature="e#2167#2168#0" expanded="true" />
+                <element signature="e#2203#2204#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PostDetailFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/PostDetailFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="68" column="52" lean-forward="false" selection-start-line="68" selection-start-column="52" selection-end-line="68" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Post.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/model/Post.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="HomeActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/HomeActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="144" column="0" lean-forward="true" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+            <state relative-caret-position="510">
+              <caret line="187" column="96" lean-forward="false" selection-start-line="187" selection-start-column="96" selection-end-line="187" selection-end-column="96" />
               <folding>
-                <element signature="e#2145#3206#0" expanded="true" />
-                <element signature="e#3205#3206#0" expanded="true" />
-                <element signature="e#6823#7221#0" expanded="true" />
-                <element signature="e#7220#7221#0" expanded="true" />
-                <element signature="e#7554#7848#0" expanded="true" />
-                <element signature="e#7847#7848#0" expanded="true" />
-                <element signature="e#8266#8668#0" expanded="true" />
-                <element signature="e#8667#8668#0" expanded="true" />
+                <element signature="e#7472#8552#0" expanded="true" />
+                <element signature="e#7791#8402#0" expanded="true" />
+                <element signature="e#8401#8402#0" expanded="true" />
+                <element signature="e#8551#8552#0" expanded="true" />
+                <element signature="e#9596#9998#0" expanded="true" />
+                <element signature="e#9997#9998#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateAccountActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/CreateAccountActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="44" column="4" lean-forward="false" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="60" />
+              <folding>
+                <element signature="e#2660#3061#0" expanded="true" />
+                <element signature="e#3060#3061#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProfileFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/ProfileFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -105,6 +144,7 @@
       <find>status</find>
       <find>parseuser</find>
       <find>grid_sp</find>
+      <find>filepath</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2128,9 +2168,7 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/res/layout/toolbar.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/edittext_border.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_create_account.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/ParseApp.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/CreateAccountActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/SettingsActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/xml/fileprovider.xml" />
@@ -2159,10 +2197,8 @@
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/model/Post.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_post_detail.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_post.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/PostDetailActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/PostAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/PostDetailFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/SpaceItemDecoration.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
@@ -2170,6 +2206,11 @@
         <option value="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/ProfileFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/TimelineFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_post.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/PostProfileFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/PostAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_create_account.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/CreateAccountActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/HomeActivity.java" />
       </list>
     </option>
@@ -2195,7 +2236,6 @@
     </navigator>
     <panes>
       <pane id="ProjectPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="AndroidView">
@@ -2204,11 +2244,6 @@
             <path>
               <item name="Parsetagram" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="Parsetagram" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
             </path>
             <path>
               <item name="Parsetagram" type="1abcf292:AndroidViewProjectNode" />
@@ -2241,18 +2276,13 @@
             </path>
             <path>
               <item name="Parsetagram" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="Parsetagram" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2435,12 +2465,21 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -2450,12 +2489,13 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27932286" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3700121" sideWeight="0.49713877" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3700121" sideWeight="0.49713877" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33131802" sideWeight="0.49713877" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39903265" sideWeight="0.49570817" order="3" side_tool="false" content_ui="tabs" />
@@ -2468,7 +2508,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -2476,24 +2515,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/PostAdapter.java</url>
-          <line>101</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="5" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ufi_comment.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/nav_inbox_paper_plane.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -2629,14 +2655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/CreateAccountActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="71" column="29" lean-forward="false" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/SettingsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -2672,19 +2690,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="54" lean-forward="false" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/4.7.1/835685a4ca352a1c6d5f724088432ae950e04bac/glide-4.7.1-sources.jar!/com/bumptech/glide/Glide.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
           <caret line="735" column="0" lean-forward="false" selection-start-line="735" selection-start-column="0" selection-end-line="735" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2692,30 +2701,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="1598" column="0" lean-forward="false" selection-start-line="1598" selection-start-column="0" selection-end-line="1598" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_post.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="104" column="45" lean-forward="false" selection-start-line="104" selection-start-column="45" selection-end-line="104" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_post_detail.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="63" lean-forward="false" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_timeline.xml">
@@ -2745,17 +2731,6 @@
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_create_account.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
@@ -2790,33 +2765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/PostDetailFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="81" column="38" lean-forward="false" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="32" column="54" lean-forward="false" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/TimelineFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
@@ -2826,14 +2774,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="74" lean-forward="false" selection-start-line="5" selection-start-column="74" selection-end-line="5" selection-end-column="74" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/CameraFragment.java">
@@ -2852,9 +2800,101 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81">
+          <caret line="32" column="54" lean-forward="false" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_post.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/PostProfileFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1005">
+          <caret line="67" column="61" lean-forward="false" selection-start-line="67" selection-start-column="61" selection-end-line="67" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1963#2036#0" expanded="false" />
+            <element signature="e#2590#3359#0" expanded="false" />
+            <element signature="e#3358#3359#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="48" column="54" lean-forward="false" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_post_detail.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="63" lean-forward="false" selection-start-line="36" selection-start-column="63" selection-end-line="36" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="54" column="33" lean-forward="true" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_create_account.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="164" column="43" lean-forward="false" selection-start-line="164" selection-start-column="43" selection-end-line="164" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/ProfileFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="23" column="47" lean-forward="false" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/CreateAccountActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="44" column="4" lean-forward="false" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="60" />
+          <folding>
+            <element signature="e#2660#3061#0" expanded="true" />
+            <element signature="e#3060#3061#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/model/Post.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="360">
           <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
           <folding />
         </state>
@@ -2862,42 +2902,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/PostAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="111" column="16" lean-forward="true" selection-start-line="111" selection-start-column="16" selection-end-line="111" selection-end-column="16" />
+        <state relative-caret-position="269">
+          <caret line="125" column="63" lean-forward="false" selection-start-line="125" selection-start-column="63" selection-end-line="125" selection-end-column="63" />
           <folding>
             <element signature="e#896#897#0" expanded="true" />
             <element signature="e#926#927#0" expanded="true" />
-            <element signature="e#2109#2110#0" expanded="true" />
-            <element signature="e#2145#2146#0" expanded="true" />
+            <element signature="e#2167#2168#0" expanded="true" />
+            <element signature="e#2203#2204#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/ProfileFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/PostDetailFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2513#3300#0" expanded="true" />
-            <element signature="e#3299#3300#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="284">
+          <caret line="68" column="52" lean-forward="false" selection-start-line="68" selection-start-column="52" selection-end-line="68" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/me/juliasson/parsetagram/HomeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="144" column="0" lean-forward="true" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+        <state relative-caret-position="510">
+          <caret line="187" column="96" lean-forward="false" selection-start-line="187" selection-start-column="96" selection-end-line="187" selection-end-column="96" />
           <folding>
-            <element signature="e#2145#3206#0" expanded="true" />
-            <element signature="e#3205#3206#0" expanded="true" />
-            <element signature="e#6823#7221#0" expanded="true" />
-            <element signature="e#7220#7221#0" expanded="true" />
-            <element signature="e#7554#7848#0" expanded="true" />
-            <element signature="e#7847#7848#0" expanded="true" />
-            <element signature="e#8266#8668#0" expanded="true" />
-            <element signature="e#8667#8668#0" expanded="true" />
+            <element signature="e#7472#8552#0" expanded="true" />
+            <element signature="e#7791#8402#0" expanded="true" />
+            <element signature="e#8401#8402#0" expanded="true" />
+            <element signature="e#8551#8552#0" expanded="true" />
+            <element signature="e#9596#9998#0" expanded="true" />
+            <element signature="e#9997#9998#0" expanded="true" />
           </folding>
         </state>
       </provider>

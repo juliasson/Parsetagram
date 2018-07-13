@@ -17,7 +17,7 @@
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toBottomOf="@+id/ivInstagram">
 
         <EditText
             android:id="@+id/etFirstName"
@@ -126,16 +126,17 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:background="@color/blue_3"
-        android:textColor="@color/solid_white"
         android:text="Sign Up"
+        android:textColor="@color/solid_white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/ivProfileImage" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ivInstagram"
         android:layout_width="207dp"
         android:layout_height="79dp"
         android:layout_marginEnd="8dp"
@@ -147,5 +148,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivProfileImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail"
+        app:srcCompat="@drawable/camera_shadow_fill"
+        android:onClick="addProfileImage" />
 
 </android.support.constraint.ConstraintLayout>

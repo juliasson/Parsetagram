@@ -56,6 +56,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
         Glide.with(mContext)
                 .load(post.getUser().getParseFile("profileImage").getUrl())
+                .apply(RequestOptions.overrideOf(70, 70))
                 .apply(RequestOptions.circleCropTransform())
                 .into(holder.ivProfileImage);
     }
@@ -92,6 +93,24 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             tvDescription = itemView.findViewById(R.id.tvDescription);
             tvTimeStamp = itemView.findViewById(R.id.tvTimeStamp);
 
+            ivProfileImage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int position = getAdapterPosition();
+                    if (position != RecyclerView.NO_POSITION) {
+                        Post post = mPosts.get(position);
+                        Bundle args = new Bundle();
+                        args.putParcelable("post", post);
+                        PostProfileFragment fragment = new PostProfileFragment();
+                        fragment.setArguments(args);
+                        HomeActivity activity = (HomeActivity) mContext;
+                        FragmentTransaction transaction = activity.getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.flContainer, fragment);
+                        transaction.commit();
+                    }
+                }
+            });
+
             itemView.setOnClickListener(this);
         }
 
@@ -108,10 +127,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
                 FragmentTransaction transaction = activity.getSupportFragmentManager().beginTransaction();
                 transaction.replace(R.id.flContainer, fragment);
                 transaction.commit();
-
-                //Intent i = new Intent(mContext, PostDetailActivity.class);
-                //i.putExtra("post", Parcels.wrap(post));
-                //mContext.startActivity(i);
             }
         }
     }
