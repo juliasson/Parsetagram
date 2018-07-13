@@ -2,21 +2,12 @@ package me.juliasson.parsetagram;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
-
-import com.parse.ParseException;
-import com.parse.ParseFile;
-import com.parse.ParseUser;
-import com.parse.SaveCallback;
-
-import me.juliasson.parsetagram.model.Post;
 
 public class CameraFragment extends Fragment {
     // The onCreateView method is called when Fragment should create its View object hierarchy,
@@ -34,8 +25,6 @@ public class CameraFragment extends Fragment {
         bvCreate = v.findViewById(R.id.bvCreate);
         etDescription = v.findViewById(R.id.etDescription);
 
-
-
         return v;
     }
 
@@ -47,22 +36,4 @@ public class CameraFragment extends Fragment {
         // EditText etFoo = (EditText) view.findViewById(R.id.etFoo);
     }
 
-    private void createPost(String description, ParseFile image, ParseUser user) {
-        final Post newPost = new Post();
-        newPost.setDescription(description);
-        newPost.setImage(image);
-        newPost.setUser(user);
-
-        newPost.saveInBackground(new SaveCallback() {
-            @Override
-            public void done(ParseException e) {
-                if (e == null) {
-                    Log.d("CreatePostActivity", "Create item_post success");
-                    Toast.makeText(getActivity(), "Post created!", Toast.LENGTH_SHORT).show();
-                } else {
-                    e.printStackTrace();
-                }
-            }
-        });
-    }
 }

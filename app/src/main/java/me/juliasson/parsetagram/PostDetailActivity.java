@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import org.parceler.Parcels;
 
@@ -41,7 +42,7 @@ public class PostDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_post_detail);
         context = this;
 
-        ivProfileImage = findViewById(R.id.ivProfileImage);
+        ivProfileImage = findViewById(R.id.ivProfileImageDetail);
         tvUserName = findViewById(R.id.tvUserName);
         ibOptions = findViewById(R.id.ibOptions);
         ivImage = findViewById(R.id.ivImage);
@@ -62,6 +63,11 @@ public class PostDetailActivity extends AppCompatActivity {
         Glide.with(context)
                 .load(post.getImage().getUrl())
                 .into(ivImage);
+
+        Glide.with(context)
+                .load(post.getUser().getParseFile("profileImage").getUrl())
+                .apply(RequestOptions.circleCropTransform())
+                .into(ivProfileImage);
     }
 
     // getRelativeTimeAgo("Mon Apr 01 21:16:23 +0000 2014");

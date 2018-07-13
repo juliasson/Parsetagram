@@ -8,12 +8,29 @@
         android:title="Timeline"
         android:iconTint="@color/black"
         app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_search"
+        android:enabled="true"
+        android:icon="@drawable/ufi_search"
+        android:title="Search"
+        android:iconTint="@color/black"
+        app:showAsAction="ifRoom" />
+
     <item
         android:id="@+id/action_camera"
         android:enabled="true"
         android:icon="@drawable/instagram_new_post_outline_24"
         android:title="Camera"
         app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_likes"
+        android:enabled="true"
+        android:icon="@drawable/ufi_heart"
+        android:title="Likes"
+        app:showAsAction="ifRoom" />
+
     <item
         android:id="@+id/action_profile"
         android:enabled="true"

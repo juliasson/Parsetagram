@@ -22,7 +22,11 @@
             android:id="@+id/ivProfileImage"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_margin="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="0dp"
+            android:layout_alignParentLeft="true"
             android:contentDescription="profile image"
             app:srcCompat="@drawable/camera_shadow_fill" />
 

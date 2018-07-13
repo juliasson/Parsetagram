@@ -15,6 +15,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+import com.parse.ParseUser;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -53,7 +55,7 @@ public class PostDetailFragment extends Fragment {
         // EditText etFoo = (EditText) view.findViewById(R.id.etFoo);
         Post post;
 
-        ImageView ivProfileImage = view.findViewById(R.id.ivProfileImage);
+        ImageView ivProfileImage = view.findViewById(R.id.ivProfileImageDetail);
         TextView tvUserName = view.findViewById(R.id.tvUserName);
         ImageButton ibOptions = view.findViewById(R.id.ibOptions);
         ImageView ivImage = view.findViewById(R.id.ivImage);
@@ -74,6 +76,10 @@ public class PostDetailFragment extends Fragment {
         Glide.with(this)
                 .load(post.getImage().getUrl())
                 .into(ivImage);
+        Glide.with(view.getContext())
+                .load(ParseUser.getCurrentUser().getParseFile("profileImage").getUrl())
+                .apply(RequestOptions.circleCropTransform())
+                .into(ivProfileImage);
     }
 
     // This method is called when the fragment is no longer connected to the Activity

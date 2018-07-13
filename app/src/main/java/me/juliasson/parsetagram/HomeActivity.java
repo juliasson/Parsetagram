@@ -20,7 +20,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.parse.ParseException;
+import com.parse.ParseFile;
+import com.parse.ParseUser;
+import com.parse.SaveCallback;
+
 import java.io.File;
+
+import me.juliasson.parsetagram.model.Post;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -29,9 +36,11 @@ public class HomeActivity extends AppCompatActivity {
     Fragment fragment1 = new TimelineFragment();
     Fragment fragment2 = new CameraFragment();
     Fragment fragment3 = new ProfileFragment();
+    FragmentManager fragmentManager;
 
     public final String APP_TAG = "MyCustomApp";
     public final static int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 1034;
+    public final static int GALLERY_IMAGE_SELECTION_REQUEST_CODE = 2034;
     public String photoFileName = "photo.jpg";
     File photoFile;
 
@@ -43,7 +52,7 @@ public class HomeActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.tbToolBar);
         setSupportActionBar(toolbar);
 
-        final FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.flContainer, fragment1).commit();
 
@@ -78,6 +87,12 @@ public class HomeActivity extends AppCompatActivity {
     public void onClickToSettings(View view) {
         Intent i = new Intent(HomeActivity.this, SettingsFragment.class);
         startActivity(i);
+    }
+
+    public void addProfileImage(View view) {
+//        Toast.makeText(view.getContext(), "Change photo clicked!", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(intent, GALLERY_IMAGE_SELECTION_REQUEST_CODE);
     }
 
     //----------CAMERA-----------
@@ -136,6 +151,63 @@ public class HomeActivity extends AppCompatActivity {
             } else { // Result was a failure
                 Toast.makeText(this, "Picture wasn't taken!", Toast.LENGTH_SHORT).show();
             }
+        } else if (requestCode == GALLERY_IMAGE_SELECTION_REQUEST_CODE) {
+            if (resultCode == RESULT_OK) {
+                //TODO: MATCH ADDPROFILEMETHOD TO ONLAUNCHCAMERA
+                photoFile = getPhotoFileUri(photoFileName);
+
+                final ParseFile parseFile = new ParseFile(photoFile);
+
+                parseFile.saveInBackground(new SaveCallback() {
+                    @Override
+                    public void done(ParseException e) {
+                        if (e == null) {
+                            ParseUser.getCurrentUser().put("profileImage", new ParseFile(photoFile));
+                        } else {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+
+            }
         }
+    }
+
+    public void onCreatePost(View view) {
+        final String description = ((CameraFragment)fragment2).etDescription.getText().toString();
+        final ParseUser user = ParseUser.getCurrentUser();
+        final ParseFile parseFile = new ParseFile(photoFile);
+
+        parseFile.saveInBackground(new SaveCallback() {
+            @Override
+            public void done(ParseException e) {
+                if (e == null) {
+                    createPost(description, parseFile, user);
+                } else {
+                    e.printStackTrace();
+                }
+            }
+        });
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.flContainer, fragment1).commit();
+    }
+
+    private void createPost(String description, ParseFile image, ParseUser user) {
+        final Post newPost = new Post();
+        newPost.setDescription(description);
+        newPost.setImage(image);
+        newPost.setUser(user);
+
+        newPost.saveInBackground(new SaveCallback() {
+            @Override
+            public void done(ParseException e) {
+                if (e == null) {
+                    Log.d("HomeActivity", "Create item_post success");
+                    Toast.makeText(HomeActivity.this, "Post created!", Toast.LENGTH_SHORT).show();
+                } else {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 }

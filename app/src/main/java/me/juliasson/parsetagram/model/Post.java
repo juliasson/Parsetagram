@@ -12,6 +12,7 @@ public class Post extends ParseObject {
     private static final String KEY_DESCRIPTION = "description";
     private static final String KEY_IMAGE = "image";
     private static final String KEY_USER = "user";
+    private static final String KEY_ID = "objectId";
 
     //getters
     public String getDescription() {
@@ -25,6 +26,8 @@ public class Post extends ParseObject {
     public ParseUser getUser() {
         return getParseUser(KEY_USER);
     }
+
+    public String getId() { return getString(KEY_ID); }
 
     //setters
     public void setDescription(String description) {

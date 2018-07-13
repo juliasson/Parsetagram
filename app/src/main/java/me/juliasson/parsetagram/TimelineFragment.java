@@ -68,6 +68,7 @@ public class TimelineFragment extends Fragment{
 
     private void loadTopPosts() {
         final Post.Query postQuery = new Post.Query();
+        postQuery.orderByDescending("createdAt");
         postQuery.getTop().withUser();
 
         postQuery.findInBackground(new FindCallback<Post>() {
@@ -76,7 +77,7 @@ public class TimelineFragment extends Fragment{
                 if (e == null) {
                     for(int i = 0; i < objects.size(); i++) {
                         Post post = objects.get(i);
-                        posts.add(0, post);
+                        posts.add(post);
                         postAdapter.notifyItemInserted(posts.size() - 1);
                     }
                 } else {

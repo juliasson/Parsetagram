@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -53,6 +54,10 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
                 .load(post.getImage().getUrl())
                 .into(holder.ivImage);
 
+        Glide.with(mContext)
+                .load(post.getUser().getParseFile("profileImage").getUrl())
+                .apply(RequestOptions.circleCropTransform())
+                .into(holder.ivProfileImage);
     }
 
     @Override
@@ -101,13 +106,12 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
                 fragment.setArguments(args);
                 HomeActivity activity = (HomeActivity)mContext;
                 FragmentTransaction transaction = activity.getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.linearLayout, fragment);
+                transaction.replace(R.id.flContainer, fragment);
                 transaction.commit();
 
-                //
-//                Intent i = new Intent(mContext, PostDetailActivity.class);
-//                i.putExtra("post", Parcels.wrap(post));
-//                mContext.startActivity(i);
+                //Intent i = new Intent(mContext, PostDetailActivity.class);
+                //i.putExtra("post", Parcels.wrap(post));
+                //mContext.startActivity(i);
             }
         }
     }
