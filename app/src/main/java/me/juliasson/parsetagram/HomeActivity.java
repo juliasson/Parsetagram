@@ -40,9 +40,11 @@ public class HomeActivity extends AppCompatActivity {
 
     FragmentTransaction fragmentTransaction;
 
-    Fragment fragment1 = new TimelineFragment();
-    Fragment fragment2 = new CameraFragment();
-    Fragment fragment3 = new ProfileFragment();
+    Fragment fragmentTimeline = new TimelineFragment();
+    Fragment fragmentCamera = new CameraFragment();
+    Fragment fragmentProfile = new ProfileFragment();
+    Fragment fragmentSearch = new SearchFragment();
+    Fragment fragmentLikes = new LikesFragment();
     FragmentManager fragmentManager;
 
     public final String APP_TAG = "MyCustomApp";
@@ -63,7 +65,7 @@ public class HomeActivity extends AppCompatActivity {
 
         fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.flContainer, fragment1).commit();
+        fragmentTransaction.replace(R.id.flContainer, fragmentTimeline).commit();
 
         // handle navigation selection
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -76,14 +78,20 @@ public class HomeActivity extends AppCompatActivity {
 
                         switch (item.getItemId()) {
                             case R.id.action_timeline:
-                                fragmentTransaction.replace(R.id.flContainer, fragment1).commit();
+                                fragmentTransaction.replace(R.id.flContainer, fragmentTimeline).commit();
                                 return true;
                             case R.id.action_camera:
-                                fragmentTransaction.replace(R.id.flContainer, fragment2).commit();
+                                fragmentTransaction.replace(R.id.flContainer, fragmentCamera).commit();
                                 onLaunchCamera();
                                 return true;
                             case R.id.action_profile:
-                                fragmentTransaction.replace(R.id.flContainer, fragment3).commit();
+                                fragmentTransaction.replace(R.id.flContainer, fragmentProfile).commit();
+                                return true;
+                            case R.id.action_search:
+                                fragmentTransaction.replace(R.id.flContainer, fragmentSearch).commit();
+                                return true;
+                            case R.id.action_likes:
+                                fragmentTransaction.replace(R.id.flContainer, fragmentLikes).commit();
                                 return true;
                         }
 
@@ -156,7 +164,7 @@ public class HomeActivity extends AppCompatActivity {
                 String imagePath = photoFile.getAbsolutePath();
                 Bitmap rawTakenImage = BitmapFactory.decodeFile(imagePath);
                 Bitmap resizedBitmap = BitmapScaler.scaleToFitWidth(rawTakenImage, 400);
-                ((CameraFragment) fragment2).ivPreview.setImageBitmap(resizedBitmap);
+                ((CameraFragment) fragmentCamera).ivPreview.setImageBitmap(resizedBitmap);
 
             } else { // Result was a failure
                 Toast.makeText(this, "Picture wasn't taken!", Toast.LENGTH_SHORT).show();
@@ -168,7 +176,7 @@ public class HomeActivity extends AppCompatActivity {
 
                 try {
                     Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
-                    ((ProfileFragment)fragment3).ivProfileImageDetail.setImageBitmap(bitmap);
+                    ((ProfileFragment) fragmentProfile).ivProfileImageDetail.setImageBitmap(bitmap);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -202,7 +210,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void onCreatePost(View view) {
-        final String description = ((CameraFragment)fragment2).etDescription.getText().toString();
+        final String description = ((CameraFragment) fragmentCamera).etDescription.getText().toString();
         final ParseUser user = ParseUser.getCurrentUser();
         final ParseFile parseFile = new ParseFile(photoFile);
         final ProgressBar pb = (ProgressBar) findViewById(R.id.pbLoading);
@@ -220,7 +228,7 @@ public class HomeActivity extends AppCompatActivity {
         });
         pb.setVisibility(ProgressBar.INVISIBLE);
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.flContainer, fragment1).commit();
+        fragmentTransaction.replace(R.id.flContainer, fragmentTimeline).commit();
     }
 
     private void createPost(String description, ParseFile image, ParseUser user) {
