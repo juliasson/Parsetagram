@@ -50,6 +50,7 @@ public class HomeActivity extends AppCompatActivity {
     public final String APP_TAG = "MyCustomApp";
     public final static int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 1034;
     public final static int GALLERY_IMAGE_SELECTION_REQUEST_CODE = 2034;
+    public final static int GALLERY_IMAGE_CREATE_POST_REQUEST_CODE = 3034;
     private final String KEY_PROFILE_IMAGE = "profileImage";
     public String photoFileName = "photo.jpg";
     public String profileImageFilePath = "photo.jpg";
@@ -82,7 +83,6 @@ public class HomeActivity extends AppCompatActivity {
                                 return true;
                             case R.id.action_camera:
                                 fragmentTransaction.replace(R.id.flContainer, fragmentCamera).commit();
-                                onLaunchCamera();
                                 return true;
                             case R.id.action_profile:
                                 fragmentTransaction.replace(R.id.flContainer, fragmentProfile).commit();
@@ -111,6 +111,17 @@ public class HomeActivity extends AppCompatActivity {
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         intent.setType("image/jpeg");
         startActivityForResult(intent, GALLERY_IMAGE_SELECTION_REQUEST_CODE);
+    }
+
+    public void onClickCamera(View view) {
+        onLaunchCamera();
+    }
+
+    public void onClickGallery(View view) {
+        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+        intent.addCategory(Intent.CATEGORY_OPENABLE);
+        intent.setType("image/jpeg");
+        startActivityForResult(intent, GALLERY_IMAGE_CREATE_POST_REQUEST_CODE);
     }
 
     //----------CAMERA-----------
@@ -205,6 +216,21 @@ public class HomeActivity extends AppCompatActivity {
                         }
                     }
                 });
+            }
+        } else if (requestCode == GALLERY_IMAGE_CREATE_POST_REQUEST_CODE) {
+            if (resultCode == RESULT_OK) {
+                Uri uri = data.getData();
+                profileImageFilePath = getPath(this, uri);
+
+                try {
+                    Bitmap rawTakenImage = MediaStore.Images.Media.getBitmap(getContentResolver(), uri);
+                    Bitmap resizedBitmap = BitmapScaler.scaleToFitWidth(rawTakenImage, 500);
+                    ((CameraFragment) fragmentCamera).ivPreview.setImageBitmap(resizedBitmap);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                photoFile = new File(profileImageFilePath);
             }
         }
     }

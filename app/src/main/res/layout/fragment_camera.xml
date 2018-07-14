@@ -9,14 +9,12 @@
         android:id="@+id/etDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:hint="Enter description"
-        app:layout_constraintBottom_toTopOf="@+id/bvCreate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivPreview" />
@@ -31,8 +29,9 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:background="@color/loginPink"
-        android:text="Create"
         android:onClick="onCreatePost"
+        android:text="Create"
+        android:textColor="@color/solid_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -45,10 +44,10 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tbToolBar"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/camera_shadow_fill" />
 
     <ProgressBar
@@ -59,5 +58,37 @@
         android:visibility="invisible"
         app:layout_constraintTop_toBottomOf="@+id/etDescription"
         tools:layout_editor_absoluteX="168dp" />
+
+    <Button
+        android:id="@+id/bvCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/loginPink"
+        android:textColor="@color/solid_white"
+        android:text="Camera"
+        android:onClick="onClickCamera"
+        app:layout_constraintBottom_toTopOf="@+id/bvCreate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDescription" />
+
+    <Button
+        android:id="@+id/bvGallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/loginPink"
+        android:textColor="@color/solid_white"
+        android:onClick="onClickGallery"
+        android:text="Gallery"
+        app:layout_constraintBottom_toTopOf="@+id/bvCreate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pbLoading" />
 
 </android.support.constraint.ConstraintLayout>
